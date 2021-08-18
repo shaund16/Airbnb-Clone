@@ -13,7 +13,7 @@ const InfoCard = ({
   total,
 }) => {
   return (
-    <div className='flex py-7 px-2 pr-4 border-b rounded-3xl cursor-pointer hover:shadow-lg hover:bg-gradient-to-t hover:from-red-200 hover:text-red-900 active:scale-105 transform transition duration-200 ease-out first:border-t-2'>
+    <div className='flex py-7 px-2 pr-4 border-b rounded-3xl cursor-pointer hover:shadow-lg hover:bg-gradient-to-t hover:from-white-200 hover:text-grey-900 active:scale-105 transform transition duration-200 ease-out first:border-t-2'>
       <div className='relative h-24 w-40 md:w-80 md:h-52 flex-shrink-0 hover:opacity-90'>
         <Image
           className='rounded-3xl'
