@@ -10,8 +10,8 @@ import Map from "../components/Map";
 function Search({ searchResults }) {
   const router = useRouter();
   const { location, startDate, endDate, noOfGuests } = router.query; 
-  const formattedStartDate = format(new Date(startDate), "dd MMMM yy");
-  const formattedEndDate = format(new Date(endDate), "dd MMMM yy");
+  const formattedStartDate = format(new Date(), "dd MMMM yy");
+  const formattedEndDate = format(new Date(), "dd MMMM yy");
   const range = `${formattedStartDate} - ${formattedEndDate}`;
 
   return (
@@ -39,7 +39,6 @@ function Search({ searchResults }) {
             {searchResults.map(
               ({ img, location, title, description, star, price, total }) => (
                 <InfoCard
-                  key={img}
                   img={img}
                   location={location}
                   title={title}
@@ -53,8 +52,8 @@ function Search({ searchResults }) {
           </div>
         </section>
 
-        <section className=''>
-          <Map />
+        <section className='hidden xl:inline-flex xl:min-w-[600px]'>
+          <Map searchResults={searchResults} />
         </section>
       </main>
 
